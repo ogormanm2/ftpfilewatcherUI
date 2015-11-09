@@ -1,0 +1,10 @@
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\FileWatcher.exe
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\FileWatcher.pdb
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.frmMain.resources
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.Properties.Resources.resources
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.csproj.GenerateResource.Cache
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.exe
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.pdb
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\Newtonsoft.Json.dll
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\Newtonsoft.Json.xml
+c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.csprojResolveAssemblyReference.cache
