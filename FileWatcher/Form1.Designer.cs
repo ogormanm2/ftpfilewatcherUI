@@ -45,6 +45,11 @@
             this.btnRun = new System.Windows.Forms.Button();
             this.btnEnd = new System.Windows.Forms.Button();
             this.lstLogOutput = new System.Windows.Forms.ListView();
+            this.job = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.filename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.path = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.datecreated = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,11 +196,52 @@
             // 
             // lstLogOutput
             // 
+            this.lstLogOutput.AllowColumnReorder = true;
+            this.lstLogOutput.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.job,
+            this.status,
+            this.filename,
+            this.path,
+            this.datecreated});
+            this.lstLogOutput.FullRowSelect = true;
+            this.lstLogOutput.GridLines = true;
+            this.lstLogOutput.LabelEdit = true;
             this.lstLogOutput.Location = new System.Drawing.Point(15, 213);
             this.lstLogOutput.Name = "lstLogOutput";
             this.lstLogOutput.Size = new System.Drawing.Size(309, 153);
+            this.lstLogOutput.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lstLogOutput.TabIndex = 9;
             this.lstLogOutput.UseCompatibleStateImageBehavior = false;
+            this.lstLogOutput.View = System.Windows.Forms.View.Details;
+            // 
+            // job
+            // 
+            this.job.Tag = "job";
+            this.job.Text = "Job";
+            // 
+            // status
+            // 
+            this.status.Tag = "status";
+            this.status.Text = "Status";
+            this.status.Width = 80;
+            // 
+            // filename
+            // 
+            this.filename.Tag = "filename";
+            this.filename.Text = "File Name";
+            this.filename.Width = 90;
+            // 
+            // path
+            // 
+            this.path.Tag = "path";
+            this.path.Text = "Path";
+            this.path.Width = 150;
+            // 
+            // datecreated
+            // 
+            this.datecreated.Tag = "datecreated";
+            this.datecreated.Text = "Date";
+            this.datecreated.Width = 70;
             // 
             // frmMain
             // 
@@ -239,6 +285,11 @@
         private System.Windows.Forms.ListView lstLogOutput;
         private System.Windows.Forms.ComboBox cmbPort;
         private System.Windows.Forms.Label lblPort;
+        private System.Windows.Forms.ColumnHeader job;
+        private System.Windows.Forms.ColumnHeader status;
+        private System.Windows.Forms.ColumnHeader filename;
+        private System.Windows.Forms.ColumnHeader path;
+        private System.Windows.Forms.ColumnHeader datecreated;
     }
 }
 

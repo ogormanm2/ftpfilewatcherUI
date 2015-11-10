@@ -7,4 +7,6 @@ c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\o
 c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.pdb
 c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\Newtonsoft.Json.dll
 c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\Newtonsoft.Json.xml
-c:\users\matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.csprojResolveAssemblyReference.cache
+C:\Users\Matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\Cassandra.dll
+C:\Users\Matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\LZ4.dll
+C:\Users\Matthew\documents\visual studio 2010\Projects\FileWatcher\FileWatcher\bin\Debug\Cassandra.xml

@@ -37,7 +37,7 @@ namespace FileWatcher
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            string strJson = File.ReadAllText(@"C:\Users\Matthew\Proj\Node.JS\filewatcher\config.json");
+            string strJson = File.ReadAllText(@"C:\Users\Matthew\Proj\Node.JS\ftpfilewatcher\config.json");
             dynamic json = JsonConvert.DeserializeObject(strJson);
             txtSourceDir.Text = json.sourcedir;
             txtFTPHost.Text = json.host;
@@ -48,6 +48,9 @@ namespace FileWatcher
             Thread thread = new Thread(CaptureStdoutThread);
             thread.IsBackground = true;
             thread.Start();
+
+            // Load ListBox with log
+            LoadLogFileList();
         }
 
         public void ChooseFolder()
@@ -63,9 +66,42 @@ namespace FileWatcher
             ChooseFolder();
         }
 
+        private void LoadLogFileList()
+        {
+            DataTable dt = new DataTable();
+            // Clear control
+            //lstLogOutput.Clear();
+            CassandraDAL cassDAL = new CassandraDAL();
+            cassDAL.Open();
+            dt = cassDAL.GetDataTable("select * from ftpfileaudit");
+
+            // Display items in the ListView control
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow drow = dt.Rows[i];
+
+                // Only row that have not been deleted
+                if (drow.RowState != DataRowState.Deleted)
+                {
+                    // Define the list items
+                    ListViewItem lvi = new ListViewItem(drow["job"].ToString());
+                    lvi.SubItems.Add(drow["status"].ToString());
+                    lvi.SubItems.Add(drow["filename"].ToString());
+                    lvi.SubItems.Add(drow["path"].ToString());
+                    lvi.SubItems.Add(drow["datecreated"].ToString());
+
+                    // Add the list items to the ListView
+                    lstLogOutput.Items.Add(lvi);
+                }
+            }
+            cassDAL.Close();
+        }         
+
+       
+
         private void RunNodeFileWatcher()
         {
-            int lineCount = 0;
+            //int lineCount = 0;
             StringBuilder output = new StringBuilder();
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
